@@ -1,17 +1,24 @@
-Date: Tue, 29 Sep 2026 17:27:46 +0000
+Architectures: amd64
+Codename: stable
+Components: main
+Date: Tue, 29 Sep 2026 17:43:42 +0000
+Description: Packages for Andrelidia servers
+Label: Andrelidia Packages
+Origin: Andrelidia Servers
+Suite: stable
 MD5Sum:
- ff8ac134c29d65532029b07af109395e               38 Release
+ c4db675e6831a82a49e38175b6a85a68              206 Release
  9e6ace435a803573cda35551a0f5c82c              548 main/binary-amd64/Packages
- a54258e6e1e4bed8f8848074709fd61f              418 main/binary-amd64/Packages.gz
+ a758b4112f1c991cbbb0e14ea06ffebd              418 main/binary-amd64/Packages.gz
 SHA1:
- 36f6e021a9e590977677e5dd4ab93ae1148f6f63               38 Release
+ 91a990534592dfdabb95d41f0002a2f7772f92d0              206 Release
  d48febd7744ce70170024ee4c1a181c582d62160              548 main/binary-amd64/Packages
- 7eebf09a5d2b0c807cba5a1bd3de1e38d15390f8              418 main/binary-amd64/Packages.gz
+ ebd41883f073e6571c247624d4ba56fe07fb8290              418 main/binary-amd64/Packages.gz
 SHA256:
- 3a8ee0ed454f1e2a7e57fd34d7dc975d61f597682779938a5df1ae747cc96a5b               38 Release
+ 4f74fdf3c8e372f52645aa6fbfcc745cf6675a9872f278f20f356ddf95a92f35              206 Release
  3ad4573fa8e2d1686423e3d482b997c59b22dfea4d9457078ec3c8b25c82826b              548 main/binary-amd64/Packages
- abce05b7f2ed7974c02875a3688276721888a3920632b2a2f2d2a71046a0cec2              418 main/binary-amd64/Packages.gz
+ 00cbe066064b7d842d64bb55dbfb448f6e80e6af76f81b6e3ca8c06881868660              418 main/binary-amd64/Packages.gz
 SHA512:
- d93c9405b327e741ecadc7287a798ed0ef0c3d12d49331053b4600176901660e334d81c4099d6b7d28981e171d6bdc398b9e40baf44745248fd2cd3460623bda               38 Release
+ 1e8522b51eb09df5aa967777ab87be9c39dd85b0b4bb9db27c585d26418ea77fe27291dc890d5d04332f3d0e2d35930da9335f4f68d04c78841edc40fb427abc              206 Release
  d092a084618f8b5b4d90c27d1833515a15a8baa448317d294db5e00ca8fc30672997b00e59ff234e31fcf583b2010ed5526b82c1ffbd3416fdc9a6f742e30c68              548 main/binary-amd64/Packages
- 9394e4e13202a5a88bb90ef5b77df6ace4c757625fbe711e18881f35c1840cb42865b67234e711a666b224d6ced38e1375b1ebf4befcd8cc90c481abdc362ed6              418 main/binary-amd64/Packages.gz
+ 1a1fee458df6c2fe224956fe78df9c95a09e37ba18896b94963147d11df4d9fa5a742e9a087e522d434013b33c614ee12756895de249cbfa3510ab531761b60c              418 main/binary-amd64/Packages.gz
