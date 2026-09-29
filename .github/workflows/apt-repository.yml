@@ -24,7 +24,13 @@ jobs:
       - name: Install tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y dpkg-dev apt-utils
+          sudo apt-get install -y dpkg-dev apt-utils gnupg
+
+      - name: Import signing key
+        env:
+          APT_GPG_PRIVATE_KEY: ${{ secrets.APT_GPG_PRIVATE_KEY }}
+        run: |
+          printf '%s' "$APT_GPG_PRIVATE_KEY" | gpg --batch --import
 
       - name: Build APT metadata
         run: |
@@ -47,6 +53,27 @@ jobs:
             release dists/stable \
             > dists/stable/Release
 
+      - name: Sign APT repository
+        env:
+          APT_GPG_PASSPHRASE: ${{ secrets.APT_GPG_PASSPHRASE }}
+        run: |
+          gpg --batch --yes \
+            --pinentry-mode loopback \
+            --passphrase "$APT_GPG_PASSPHRASE" \
+            --local-user 20AE764396F45B93F78CDD4186F254ADDA921B5B \
+            --clearsign \
+            --output dists/stable/InRelease \
+            dists/stable/Release
+
+          gpg --batch --yes \
+            --pinentry-mode loopback \
+            --passphrase "$APT_GPG_PASSPHRASE" \
+            --local-user 20AE764396F45B93F78CDD4186F254ADDA921B5B \
+            --armor \
+            --detach-sign \
+            --output dists/stable/Release.gpg \
+            dists/stable/Release
+
       - name: Commit generated metadata
         run: |
           git config user.name "github-actions[bot]"
@@ -59,5 +86,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Atualizar indices APT"
+          git commit -m "Atualizar e assinar indices APT"
           git push
