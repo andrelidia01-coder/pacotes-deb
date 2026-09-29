@@ -14,3 +14,48 @@ Description: AMDGPU monitoring and control utility
  AMD-SMI provides nvidia-smi-like monitoring and direct AMDGPU controls
  for Ubuntu CLI systems.
 
+Package: hipervisor
+Version: 1.7.0
+Architecture: all
+Maintainer: LumiOS Project <local@lumios>
+Depends: python3 (>= 3.12)
+Replaces: hipervisor-minipc (<< 1.6.2)
+Filename: pool/main/hipervisor_1.7.0_all.deb
+Size: 22180
+MD5sum: abf8786c8cbae1e9e0c16aeaa5ab91c3
+SHA1: 79b2feb8070b33c60b87f3ec7ada116589a8734a
+SHA256: 4b5c6420d6808256f3a3255e50117ef7402fd7946ce764ce12741e02e1adb0b0
+Description: Nucleo portatil de energia e telemetria
+ Carrega configuracao SQLite por sistema e usa adaptadores GPU externos.
+
+Package: hipervisor-data
+Version: 1.2.0
+Architecture: all
+Maintainer: LumiOS Project <local@lumios>
+Depends: python3 (>= 3.12), ocl-icd-libopencl1
+Conflicts: hipervisor-minipc
+Replaces: hipervisor-minipc
+Filename: pool/main/hipervisor-data_1.2.0_all.deb
+Size: 19690
+MD5sum: e1d86d289854c07d7032379752c5c49c
+SHA1: fe9549a411bc66a209cbb5b5a144d4c50a8b01a1
+SHA256: 917c96c18d5b9d2f3aef5b257a00054e49677057299139b61744e13eb70b2b0d
+Description: Gerador e seletor de bases de dados do Hipervisor
+ Valida configuracoes JSON e cria bases SQLite independentes por hardware.
+
+Package: hipervisor-web
+Version: 1.4.0
+Architecture: all
+Maintainer: LumiOS Project <local@lumios>
+Depends: hipervisor (>= 1.7.0), python3 (>= 3.12)
+Filename: pool/main/hipervisor-web_1.4.0_all.deb
+Size: 13484
+MD5sum: 11f8d851dd089ef32cf25e9fcc5f1f57
+SHA1: bd22e1484946e15a83596835745b4aaca314fdc3
+SHA256: 083826d9e7acfb2fb2318e1f34c4791c274bb6c05b172c07dea19bf452f99480
+Section: admin
+Priority: optional
+Description: Gestor web interativo do Hipervisor LumiOS
+ Interface dinâmica para Hipervisor 1.7.0, com mapa isométrico neon,
+ até quatro GPUs, discos e ventoinhas da caixa descobertos em tempo real.
+
