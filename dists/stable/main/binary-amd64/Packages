@@ -1,0 +1,16 @@
+Package: amd-smi
+Version: 1.5.0
+Architecture: all
+Maintainer: SFX-Lumi Project
+Depends: python3 (>= 3.10), pciutils, vulkan-tools, mesa-vulkan-drivers
+Filename: pool/main/amd-smi_1.5.0_all.deb
+Size: 9784
+MD5sum: 76aaa91993ac0d49c3494595e575139a
+SHA1: a4eef21b88ceb4aa947d6a1623dec0730c320205
+SHA256: 432e9056d513e3ec77e7a662d1cdd1d82dfa71640ebb33db650a2b891c6c93ea
+Section: admin
+Priority: optional
+Description: AMDGPU monitoring and control utility
+ AMD-SMI provides nvidia-smi-like monitoring and direct AMDGPU controls
+ for Ubuntu CLI systems.
+
