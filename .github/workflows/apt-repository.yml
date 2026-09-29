@@ -36,7 +36,15 @@ jobs:
           gzip -9 -c dists/stable/main/binary-amd64/Packages \
             > dists/stable/main/binary-amd64/Packages.gz
 
-          apt-ftparchive release dists/stable \
+          apt-ftparchive \
+            -o APT::FTPArchive::Release::Origin="Andrelidia Servers" \
+            -o APT::FTPArchive::Release::Label="Andrelidia Packages" \
+            -o APT::FTPArchive::Release::Suite="stable" \
+            -o APT::FTPArchive::Release::Codename="stable" \
+            -o APT::FTPArchive::Release::Architectures="amd64" \
+            -o APT::FTPArchive::Release::Components="main" \
+            -o APT::FTPArchive::Release::Description="Packages for Andrelidia servers" \
+            release dists/stable \
             > dists/stable/Release
 
       - name: Commit generated metadata
