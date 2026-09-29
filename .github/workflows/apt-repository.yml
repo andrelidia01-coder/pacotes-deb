@@ -1,0 +1,55 @@
+﻿name: Build APT Repository
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "pool/**/*.deb"
+      - ".github/workflows/apt-repository.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev apt-utils
+
+      - name: Build APT metadata
+        run: |
+          mkdir -p dists/stable/main/binary-amd64
+
+          dpkg-scanpackages --arch amd64 pool/main /dev/null \
+            > dists/stable/main/binary-amd64/Packages
+
+          gzip -9 -c dists/stable/main/binary-amd64/Packages \
+            > dists/stable/main/binary-amd64/Packages.gz
+
+          apt-ftparchive release dists/stable \
+            > dists/stable/Release
+
+      - name: Commit generated metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add dists/
+
+          if git diff --cached --quiet; then
+            echo "No metadata changes."
+            exit 0
+          fi
+
+          git commit -m "Atualizar indices APT"
+          git push
