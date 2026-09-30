@@ -44,18 +44,17 @@ Description: Gerador e seletor de bases de dados do Hipervisor
  Valida configuracoes JSON e cria bases SQLite independentes por hardware.
 
 Package: hipervisor-web
-Version: 1.4.0
+Version: 1.4.1
 Architecture: all
 Maintainer: LumiOS Project <local@lumios>
 Depends: hipervisor (>= 1.7.0), python3 (>= 3.12)
-Filename: pool/main/hipervisor-web_1.4.0_all.deb
-Size: 13484
-MD5sum: 11f8d851dd089ef32cf25e9fcc5f1f57
-SHA1: bd22e1484946e15a83596835745b4aaca314fdc3
-SHA256: 083826d9e7acfb2fb2318e1f34c4791c274bb6c05b172c07dea19bf452f99480
+Filename: pool/main/hipervisor-web_1.4.1_all.deb
+Size: 3073500
+MD5sum: 6633b8a87272f8ba33659246187ad59c
+SHA1: 087e4127c31910c78f44d30bd7979c1cf37454e3
+SHA256: 42bb5d9056cd504556703f9622b2ee23389576e42357e2050743e212b8e72df6
 Section: admin
 Priority: optional
-Description: Gestor web interativo do Hipervisor LumiOS
- Interface dinâmica para Hipervisor 1.7.0, com mapa isométrico neon,
- até quatro GPUs, discos e ventoinhas da caixa descobertos em tempo real.
+Description: Gestor web Hipervisor com mapa visual e telemetria real
+ Interface web com deteção pelo system.dat e métricas via API local.
 
