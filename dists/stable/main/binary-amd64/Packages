@@ -58,3 +58,20 @@ Priority: optional
 Description: Gestor web Hipervisor com mapa visual e telemetria real
  Interface web com deteção pelo system.dat e métricas via API local.
 
+Package: xeon-pl
+Version: 1.1.0
+Architecture: amd64
+Maintainer: SFX-Lumi Project <noreply@example.invalid>
+Depends: python3, kmod, efibootmgr, util-linux
+Filename: pool/main/xeon-pl_1.1.0_amd64.deb
+Size: 26516
+MD5sum: aeae41ed33e39b32edbb4c1a4765c0a3
+SHA1: 920b4db9af7e04428f1c25eb7b247409defbec4b
+SHA256: cc1ebc222ae7166a359cb32b836878b15bdaa8f2d18188836f643e3c5773b784
+Section: admin
+Priority: optional
+Description: Haswell Xeon power limit control and recovered H81 EFI unlock
+ Reads and sets Intel Haswell MSR 0x610 PL1/PL2, preserving other bits.
+ Includes the original H81 Setup EFI writer, explicitly scheduled by xeon-pl-unlock.
+ Installation does not schedule firmware writes or change power limits.
+
