@@ -15,20 +15,68 @@ Description: AMDGPU monitoring and control utility
  for Ubuntu CLI systems.
 
 Package: lumicore
-Version: 0.1.0
+Version: 0.2.2
 Architecture: all
-Maintainer: LumiCore <lumicore@localhost>
-Depends: python3 (>= 3.10), systemd, apt, util-linux, hipervisor (>= 1.7.0)
-Filename: pool/main/lumicore_0.1.0_all.deb
-Size: 3096036
-MD5sum: 8007c7bf36a2cd32b1f088390ea7de40
-SHA1: 5d9b8b7ecc44b77182a5838f501b8d042d9f8bf4
-SHA256: eb89c72cb7f530cf0fc15641e745e7d95b503bd17acb8ac951c85e40e202c823
+Maintainer: LumiCore Project <lumicore@localhost>
+Depends: python3 (>= 3.10), systemd, lumicore-lhdb (>= 0.2.0), python3-psutil, util-linux
+Filename: pool/main/lumicore_0.2.2_all.deb
+Size: 28932
+MD5sum: a07206f9a3c876496652e20637dfa4bc
+SHA1: 2517b0425b58fc97fed3efc926c78c0420d81418
+SHA256: 42ddb55b002afa9dcd9d58421b887451dbcd0cc246cd8d58503b3d9e6adb6961
 Section: admin
 Priority: optional
-Description: Primeira migração do Hipervisor para LumiCore
- Núcleo, gestor web, identidade local e actualizações automáticas.
- Migra uma instalação existente, preservando adaptadores e perfis.
+Description: LumiCore modular hardware control core
+ Adds read-only hardware discovery in SETUP; no automatic GPU approval.
+
+Package: lumicore-lhdb
+Version: 0.2.0
+Architecture: all
+Maintainer: LumiCore Project <lumicore@localhost>
+Depends: python3 (>= 3.10)
+Filename: pool/main/lumicore-lhdb_0.2.0_all.deb
+Size: 3020
+MD5sum: 50319658457bd1d955b962f9bb59b6a5
+SHA1: a05841d617029c4523c9720133093ccb0cea5b1d
+SHA256: 4c53eed91e27cb443a551ddde736bb3f35764ef35ed912dce66ee5a93049bf03
+Section: admin
+Priority: optional
+Description: LumiCore LHDB initial schema and local identity
+ Safe clean-install modular LumiCore 0.2.0 platform architecture.
+
+Package: lumicore-web
+Version: 0.2.7
+Architecture: all
+Maintainer: LumiCore Project <lumicore@localhost>
+Depends: python3 (>= 3.10), systemd, lumicore (>= 0.2.2)
+Filename: pool/main/lumicore-web_0.2.7_all.deb
+Size: 4644316
+MD5sum: 093a5c8981f4704cb48b43b6e4d5348b
+SHA1: 30663ea3f57c9929d9b3cb4a95ff3f6fc6cbbc13
+SHA256: 93ea17287f968b1639a93613a1ed46d82bb1e14af741a758c0037ac03cf346c5
+Section: admin
+Priority: optional
+Description: LumiCore independent web administration UI
+ Uses transparent NVIDIA, AMD and Intel GPU sprites; excludes iGPU in SETUP and READY.
+
+Package: plataforma-h81
+Version: 0.2.2
+Architecture: all
+Maintainer: LumiCore Project <lumicore@localhost>
+Depends: python3 (>= 3.10), python3-serial, dkms, kmod, systemd
+Recommends: linux-headers-generic
+Filename: pool/main/patches/h81/plataforma-h81_0.2.2_all.deb
+Size: 15824
+MD5sum: ec4bbff2d648416b1908fb3c9bcaf8c0
+SHA1: 888fb63176ae994aa7a2f524b84937cae3b9f219
+SHA256: e87d1bff195b86a1ac451769452a7ce0756fbf2921172df95faeed32e8b607e5
+Section: kernel
+Priority: optional
+Description: LumiCore platform H81 - ESP32 native hwmon and fan curves
+ H81-specific support for INTEL/H81 boards: DKMS hwmon kernel module,
+ ESP32 USB serial bridge, fan curves and per-platform configuration.
+ Correct platform registration for LumiCore 0.2.1.
+ Defaults to MAX PWM and no automatic speed control after installation.
 
 Package: xeon-pl
 Version: 1.1.0
