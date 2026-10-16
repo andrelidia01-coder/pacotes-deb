@@ -1,24 +1,24 @@
 Architectures: amd64
 Codename: stable
 Components: main
-Date: Sun, 11 Oct 2026 15:21:31 +0000
+Date: Fri, 16 Oct 2026 22:27:24 +0000
 Description: Packages for Andrelidia servers
 Label: Andrelidia Packages
 Origin: Andrelidia Servers
 Suite: stable
 MD5Sum:
- cd69fc8c179a0753ac60a7119800f595              206 Release
- 6d329ab00b450c22e58f4b84d1bab6a0             4666 main/binary-amd64/Packages
- 116c6b490ff7a2f092e9ca553449ecff             2078 main/binary-amd64/Packages.gz
+ 0f047b42c4f2319efe10deb6728eb0de              206 Release
+ 5eb70b40621108c87ca4eda2ef84b306             5466 main/binary-amd64/Packages
+ b86660c90810ed6280dbd3b228a45d91             2446 main/binary-amd64/Packages.gz
 SHA1:
- 40b272819db6820980ec03f1d110321a92800e26              206 Release
- d3bc3d3e657013f512fe260fb1247004d0d1d338             4666 main/binary-amd64/Packages
- e8cff022d77e8b3da53afaaf01e5c6328e3fa36b             2078 main/binary-amd64/Packages.gz
+ 9c4e7e501310d6509d863c51e9c7203d4833ea80              206 Release
+ 71b3b670212bf2bef9a71461e46f180abac20002             5466 main/binary-amd64/Packages
+ e8f6e48baa0a86ee34606f17cf1369ffaee2af9a             2446 main/binary-amd64/Packages.gz
 SHA256:
- b233713da0cfe54d4fb83b6e227d2117410492676085b0855a285098bff7d356              206 Release
- be8e501b67b0e9dea158922c41a24aeeaa495dd53e5d23980c7ddb79975f62bf             4666 main/binary-amd64/Packages
- a73d20a4c1e0d8606065de4381fabeca234c0cad3d4c27d474c4305779a850c9             2078 main/binary-amd64/Packages.gz
+ 52b23b8c106ed7fde2e29ac81374fc45c60892b84eb83c7af0320cd0cb9a1801              206 Release
+ f1e1c07beda21624b388a9228d9d878cb6bb819528e2b846f8a91d3c16caf985             5466 main/binary-amd64/Packages
+ 86ce1a759ed9248c12db884464e3e79f8938311ad72b13220e4c10ee82dfec5c             2446 main/binary-amd64/Packages.gz
 SHA512:
- 276736e83f066451d58da2c548539cb9ba2cd0fbea24d0c7935c1389c3eae2291fce4d6d4bcedfd0db48e48a0281bcdad96204e509582a03c7f925b1e85e893a              206 Release
- 3d7ec26245795017f47feb16f21e61ee46ca9e38c7cbd32a369f9f07a649a296e05383e1fd4f49e640910bfa22e9f8be2a3db99681c81c636d1ded92b849aa45             4666 main/binary-amd64/Packages
- 89e323e927fe6b04e6d6b2a6ec72e621c134827239aad7655fd978a173bd9f54f6735e3f31647e18f5e054ca546b27b9e5585a52d83af6b5a9fd8364addafafe             2078 main/binary-amd64/Packages.gz
+ db3bc5b52d895f9a611bfedc4fefdce2c80d4562115846404f42af491e7bd5cd06b23a4b59678ad94cdb28d795a213cdcb7d88142daa85ff4aa8a95b48717e2d              206 Release
+ b6eb328d6423bef1b8a93195e6d8a750b98cacc295a9887076511f11ad5bb1e244718cefad5ba16635c82a87b3726fc44a4074714b58714c6dd2298189ef917c             5466 main/binary-amd64/Packages
+ 3fbd981885e12600321c32af865ba2c9fc6b20f995a585385e24e3afac5dc33990c26db312ebda3d38cd125b57e4f91c026d506873bd6b303238ed3f98416314             2446 main/binary-amd64/Packages.gz

@@ -29,49 +29,66 @@ Priority: optional
 Description: Benchmark LLM usando um llama-bench já instalado.
 
 Package: lumicore
-Version: 0.2.2
+Version: 0.2.5
 Architecture: all
 Maintainer: LumiCore Project <lumicore@localhost>
-Depends: python3 (>= 3.10), systemd, lumicore-lhdb (>= 0.2.0), python3-psutil, util-linux
-Filename: pool/main/lumicore_0.2.2_all.deb
-Size: 28932
-MD5sum: a07206f9a3c876496652e20637dfa4bc
-SHA1: 2517b0425b58fc97fed3efc926c78c0420d81418
-SHA256: 42ddb55b002afa9dcd9d58421b887451dbcd0cc246cd8d58503b3d9e6adb6961
+Depends: python3 (>= 3.10), systemd, lumicore-lhdb (>= 0.2.2), python3-psutil, util-linux, xserver-xorg-core, xauth, nvidia-settings, libxv1
+Filename: pool/main/lumicore_0.2.5_all.deb
+Size: 35230
+MD5sum: b02115837e7fb89bcec718d754559523
+SHA1: f0dc10d6a15ffd2e45395358104144b5b83d0f66
+SHA256: 878027d0aa8a6420c83e08393b060ac7620c89c64f4a4843d1f8e5414fd0e9d2
 Section: admin
 Priority: optional
 Description: LumiCore modular hardware control core
- Adds read-only hardware discovery in SETUP; no automatic GPU approval.
+  Discovers hardware, resolves LHDB catalog profiles and checks applied limits.
 
 Package: lumicore-lhdb
-Version: 0.2.0
+Version: 0.2.2
 Architecture: all
 Maintainer: LumiCore Project <lumicore@localhost>
 Depends: python3 (>= 3.10)
-Filename: pool/main/lumicore-lhdb_0.2.0_all.deb
-Size: 3020
-MD5sum: 50319658457bd1d955b962f9bb59b6a5
-SHA1: a05841d617029c4523c9720133093ccb0cea5b1d
-SHA256: 4c53eed91e27cb443a551ddde736bb3f35764ef35ed912dce66ee5a93049bf03
+Filename: pool/main/lumicore-lhdb_0.2.2_all.deb
+Size: 5978
+MD5sum: 0d57e05bf827a00bb8ed382f73054848
+SHA1: 1cbe3a8800f87658e48796609eb61cb70ce85c17
+SHA256: 52244437dadfd5723165ed1a03301f53da27937ce6b543da456582ff2b063d06
 Section: admin
 Priority: optional
 Description: LumiCore LHDB initial schema and local identity
  Safe clean-install modular LumiCore 0.2.0 platform architecture.
 
 Package: lumicore-web
-Version: 0.2.7
+Version: 0.2.11
 Architecture: all
 Maintainer: LumiCore Project <lumicore@localhost>
-Depends: python3 (>= 3.10), systemd, lumicore (>= 0.2.2)
-Filename: pool/main/lumicore-web_0.2.7_all.deb
-Size: 4644316
-MD5sum: 093a5c8981f4704cb48b43b6e4d5348b
-SHA1: 30663ea3f57c9929d9b3cb4a95ff3f6fc6cbbc13
-SHA256: 93ea17287f968b1639a93613a1ed46d82bb1e14af741a758c0037ac03cf346c5
+Depends: python3 (>= 3.10), util-linux, systemd, lumicore (>= 0.2.4)
+Filename: pool/main/lumicore-web_0.2.11_all.deb
+Size: 9646686
+MD5sum: c0f52d883c23cac77372356d8dd659cd
+SHA1: f23844bd394c6a633500c2bba863b4d01a55c204
+SHA256: 7449810347b982c8ae5d1cce04e2b1baecf13ecb35e811a124100c69a1c2129e
 Section: admin
 Priority: optional
 Description: LumiCore independent web administration UI
  Uses transparent NVIDIA, AMD and Intel GPU sprites; excludes iGPU in SETUP and READY.
+
+Package: lumios-cyd
+Version: 0.2.4
+Architecture: all
+Maintainer: LumiCore <local@localhost>
+Depends: python3, python3-venv, python3-serial, ca-certificates, avahi-daemon, ethtool, iproute2, systemd, udev
+Filename: pool/main/lumios-cyd_0.2.4_all.deb
+Size: 288212
+MD5sum: b18e36bb7d57780aeaf6f5856a867402
+SHA1: 9e3f1e7aba10981cebcc790c550812b6f564b2b8
+SHA256: 454be7d270d0ef4a5f8e03f233e1558fcd6a1fb45aca59e677f3723d1ca34b26
+Section: admin
+Priority: optional
+Description: LumiOS CYD two-stage USB provisioning test
+ Builds credential-free minimal and normal firmware. The mini-PC asks the
+ CYD to scan and test Wi-Fi over USB, provisions NVS, then flashes normal
+ LumiOS without erasing that NVS. Explicit serial port required.
 
 Package: memtest-vram
 Version: 1.3.0
@@ -89,16 +106,16 @@ Priority: optional
 Description: Teste de VRAM por Vulkan compute com 40 padrões.
 
 Package: plataforma-h81
-Version: 0.2.2
+Version: 0.2.4
 Architecture: all
 Maintainer: LumiCore Project <lumicore@localhost>
 Depends: python3 (>= 3.10), python3-serial, dkms, kmod, systemd
 Recommends: linux-headers-generic
-Filename: pool/main/patches/h81/plataforma-h81_0.2.2_all.deb
-Size: 15824
-MD5sum: ec4bbff2d648416b1908fb3c9bcaf8c0
-SHA1: 888fb63176ae994aa7a2f524b84937cae3b9f219
-SHA256: e87d1bff195b86a1ac451769452a7ce0756fbf2921172df95faeed32e8b607e5
+Filename: pool/main/patches/h81/plataforma-h81_0.2.4_all.deb
+Size: 16840
+MD5sum: 82b484f1546a8c25d7a86795d5694276
+SHA1: b12dd8c7178964870193a8a732ad4d401aa17562
+SHA256: f9a021f641a65f109f77608c5efa44af28c1a890916786a0c1410461d433a89b
 Section: kernel
 Priority: optional
 Description: LumiCore platform H81 - ESP32 native hwmon and fan curves
