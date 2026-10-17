@@ -74,21 +74,21 @@ Description: LumiCore independent web administration UI
  Uses transparent NVIDIA, AMD and Intel GPU sprites; excludes iGPU in SETUP and READY.
 
 Package: lumios-cyd
-Version: 0.2.4
+Version: 0.2.6
 Architecture: all
 Maintainer: LumiCore <local@localhost>
 Depends: python3, python3-venv, python3-serial, ca-certificates, avahi-daemon, ethtool, iproute2, systemd, udev
-Filename: pool/main/lumios-cyd_0.2.4_all.deb
-Size: 288212
-MD5sum: b18e36bb7d57780aeaf6f5856a867402
-SHA1: 9e3f1e7aba10981cebcc790c550812b6f564b2b8
-SHA256: 454be7d270d0ef4a5f8e03f233e1558fcd6a1fb45aca59e677f3723d1ca34b26
+Filename: pool/main/lumios-cyd_0.2.6_all.deb
+Size: 295800
+MD5sum: c8fb7b0a0af156365722a916835b60f4
+SHA1: 0eb73d58dda7bf8033c24e8fdc85835e5ed98256
+SHA256: 92a3326d3ffab80f54ec1782710905d4b937d1521099a43b32b63e9a809e73e3
 Section: admin
 Priority: optional
-Description: LumiOS CYD two-stage USB provisioning test
+Description: LumiOS CYD provisioning and TWRP-like recovery controller
  Builds credential-free minimal and normal firmware. The mini-PC asks the
  CYD to scan and test Wi-Fi over USB, provisions NVS, then flashes normal
- LumiOS without erasing that NVS. Explicit serial port required.
+ LumiOS without erasing that NVS. Includes an advanced recovery menu with explicit confirmations and command dispatch to LumiCore; recovery backend must be installed separately. Explicit serial port required.
 
 Package: memtest-vram
 Version: 1.3.0
